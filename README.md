@@ -30,17 +30,21 @@ sudo mount -a
 
 #miniDlna
 
+sudo apt-get update --fix-missing
+
 sudo apt-get install minidlna -y
 
 sudo nano /etc/minidlna.conf                              > media_dir=drive path
 							  > friendly_name=RASPI MINIDLNA
 							  
 sudo service minidlna restart
+
 sudo service minidlna force-reload
 
 #samba#
 
 sudo apt install samba samba-common-bin smbclient cifs-utils -y
+
 sudo nano /etc/samba/smb.conf >> At the end of the file,
 									[Pi]
 										path = /home/pi/shared  "Share directory location" 
@@ -68,3 +72,20 @@ sudo nano /etc/transmission-daemon/settings.json >>
 sudo systemctl start transmission-daemon
 
   sudo reboot
+ 
+#UNBOUND# 
+
+sudo apt install unbound -y
+
+wget -O root.hints https://www.internic.net/domain/named.root
+
+sudo mv root.hints /var/lib/unbound/
+  
+/etc/unbound/unbound.conf.d/pi-hole.conf      >>https://docs.pi-hole.net/guides/unbound/
+
+
+sudo service unbound start
+
+
+dig pi-hole.net @127.0.0.1 -p 5335
+
