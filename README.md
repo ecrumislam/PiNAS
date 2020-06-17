@@ -14,6 +14,7 @@ sudo apt-get update && sudo apt-get dist-upgrade -y
 wget -O basic-install.sh https://install.pi-hole.net
 sudo bash basic-install.sh
 sudo pihole -a -p
+
 #Automount usb
 
 sudo blkid
