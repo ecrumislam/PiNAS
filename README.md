@@ -25,11 +25,12 @@ sudo nano /etc/fstab
 #add#
 
 UUID=4072F4F672F4F190  /media/USB/  auto nosuid,nodev,nofail,x-gvfs-show 0 0
+
 sudo mount -a
 
 #miniDlna
 
-sudo apt-get install minidlna
+sudo apt-get install minidlna -y
 
 sudo nano /etc/minidlna.conf                              > media_dir=drive path
 							  > friendly_name=RASPI MINIDLNA
