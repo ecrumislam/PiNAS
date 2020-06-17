@@ -6,6 +6,7 @@ Follow the commands for raspbian lite
 
 Pi
 #upgrade
+
 sudo apt-get update && sudo apt-get dist-upgrade -y
 
 #pi-hole
