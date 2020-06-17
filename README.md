@@ -10,6 +10,7 @@ Pi
 sudo apt-get update && sudo apt-get dist-upgrade -y
 
 #pi-hole
+
 wget -O basic-install.sh https://install.pi-hole.net
 sudo bash basic-install.sh
 sudo pihole -a -p
@@ -19,6 +20,7 @@ sudo blkid
 
 sudo nano /etc/fstab
 #add#
+
 UUID=4072F4F672F4F190  /media/USB/  auto nosuid,nodev,nofail,x-gvfs-show 0 0
 sudo mount -a
 
