@@ -30,7 +30,8 @@ sudo mount -a
 #miniDlna
 
 sudo apt-get install minidlna
-sudo nano /etc/minidlna.conf  > media_dir=drive path
+
+sudo nano /etc/minidlna.conf                              > media_dir=drive path
 							  > friendly_name=RASPI MINIDLNA
 							  
 sudo service minidlna restart
