@@ -55,7 +55,7 @@ sudo nano /etc/samba/smb.conf >> At the end of the file,
 								
 #transmission#
 
-sudo apt-get update && sudo apt-get install transmission-daemon -yes
+sudo apt-get update && sudo apt-get install transmission-daemon -y
 
 sudo systemctl stop transmission-daemon
 
@@ -71,7 +71,7 @@ sudo nano /etc/transmission-daemon/settings.json >>
                                                     
 sudo systemctl start transmission-daemon
 
-  sudo reboot
+sudo reboot
  
 #UNBOUND# 
 
