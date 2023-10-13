@@ -53,7 +53,7 @@ sudo nano /etc/samba/smb.conf >> At the end of the file,
 										writable = yes
 										
 								
-#transmission#
+#transmission# obsolete
 
 sudo apt-get update && sudo apt-get install transmission-daemon -y
 
@@ -72,7 +72,10 @@ sudo nano /etc/transmission-daemon/settings.json >>
 sudo systemctl start transmission-daemon
 
 sudo reboot
- 
+# qbittorrent-nox#
+
+[
+](https://github.com/TeraflopsBH/qbt-update-sh)
 #UNBOUND# 
 
 sudo apt install unbound -y
@@ -88,4 +91,6 @@ sudo service unbound start
 
 
 dig pi-hole.net @127.0.0.1 -p 5335
+
+
 
