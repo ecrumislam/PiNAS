@@ -74,8 +74,10 @@ sudo systemctl start transmission-daemon
 sudo reboot
 # qbittorrent-nox#
 
-[
-](https://github.com/TeraflopsBH/qbt-update-sh)
+
+https://github.com/TeraflopsBH/qbt-update-sh)
+
+
 #UNBOUND# 
 
 sudo apt install unbound -y
