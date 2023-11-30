@@ -91,6 +91,8 @@ sudo mv root.hints /var/lib/unbound/
 
 sudo service unbound start
 
+nextcloud PHP version fix
+sudo update-alternatives --config php
 
 dig pi-hole.net @127.0.0.1 -p 5335
 
